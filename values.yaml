@@ -19,7 +19,7 @@ mysql:
 secret:
   name: mysql-password
   key: password
-  value: bGludXgxMjM=
+  value: AgB2SCqqXsV8o/inb+mVoSko9ys4Y7x/9vI907JB/wTekXDY3+vQtDFyIGwF0qOoNRjaqlk7OZ/VXKCHXhNi9iuKjJ4MeeajrJoDdbQbVJwKRZOCcvTuMGyrnUjwWBCM3U+04EmF8PylIhHgjXtEg1GP5PzYMI5VHvyco/Vbuevx5DII+Nc4LnuAzxl9x/ur+SVChkxA7F/tRd4kZ1jAAHueHu6VUvPCh+mkaEFniudmx8vzbE2uWSSboVEmiiD4RZz/nv5qr0/WulGgSN9vVxYO/U98wLMsYAaqUfRIMTfqjQ3Ik47zVlUz6zjGOJ5In3NajMVovsS9kj/p059k4YDJ+nezOul4pOTr+/U4NOvpDQcwgbvdKACcLJyk9HuVdf1A4aofAQxn4C1JzvCPQMo+K277e3nr+RT+Q1yXB8PXTVJl1/MMpFPDmp5ZKFoEorhzFMYuPYk0LlWK1oSNHvzG4yFSW3c7G042nMqlrPcj7DckdVyM7mREVo1S7K++/IHYUFObB4PV9ctEyx2jNNWrQkq7Fewo7q/Cw8dFUbDadfukxZpP3St4nDsZu7qmSNBDMfUwr9Wf5L0qkutc91gX8giibniE7goS3akyd0LIE2+lYt+5mN3TV1V1kvKKSPzhqWqjjmhM+VqWA3pl4/Zdne+vyc1EKSDy2psEACWSGN6xxy4thXyKvHFWxvebp9lcCn8Blmvh
 
 volume:
   mysql:
