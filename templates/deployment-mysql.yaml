@@ -37,4 +37,4 @@ spec:
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:
-          claimName: {{ .Values.volume.mysql.pvc }}
+          claimName: {{ .Values.volume.mysql.pvcName }}
