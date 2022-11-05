@@ -24,7 +24,7 @@ secret:
 volume:
   mysql:
     pvc: mysql-pv-claim
-    acessMode: ReadWriteOnce
+    acessMode: "ReadWriteOnce"
     size: "20Gi"
   wordpress:
     pvc: wp-pv-claim
