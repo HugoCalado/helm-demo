@@ -17,7 +17,7 @@ spec:
         app: {{ .Values.appName }}
         tier: frontend
     spec:
-      serviceAccountName: wordpress-sa
+      #serviceAccountName: wordpress-sa
       replicas: {{ .Values.wordpress.replicaCount }}
       containers:
       - image: {{ .Values.wordpress.image.name }}:{{ .Values.wordpress.image.tag }}
