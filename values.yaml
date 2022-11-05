@@ -23,12 +23,10 @@ secret:
 
 volume:
   mysql:
-    pvc: mysql-pv-claim
-    acessMode: "ReadWriteOnce"
+    pvcName: mysql-pv-claim
     size: "20Gi"
   wordpress:
-    pvc: wp-pv-claim
-    acessMode: ReadWriteOnce
+    pvcName: wp-pv-claim
     size: "20Gi"
 
 ingress:
