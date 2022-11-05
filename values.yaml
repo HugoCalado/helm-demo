@@ -17,7 +17,7 @@ mysql:
     tag: "5.6"
 
 secret:
-  name: mysql-pass
+  name: mysql-password
   key: password
   value: bGludXgxMjM=
 
