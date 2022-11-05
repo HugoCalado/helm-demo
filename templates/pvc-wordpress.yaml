@@ -6,7 +6,7 @@ metadata:
     app: {{ .Values.appName }}
 spec:
   accessModes:
-    - "{{ .Values.volume.wordpress.accessMode }}"
+    - ReadWriteOnce
   resources:
     requests:
       storage: {{ .Values.volume.wordpress.size }}
