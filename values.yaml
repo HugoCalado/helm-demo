@@ -1,0 +1,37 @@
+appName: wordpress
+issuerName: selfsigned
+
+wordpress:
+  replicaCount: 1
+  strategy: Recreate
+  image:
+    name: wordpress
+    tag: "4.8-apache"
+  db: wordpress-mysql
+
+mysql:
+  replicaCount: 1
+  strategy: Recreate
+  image:
+    name: mysql
+    tag: "5.6"
+
+secret:
+  name: mysql-pass
+  key: password
+  value: bGludXgxMjM=
+
+volume:
+  mysql:
+    pvc: mysql-pv-claim
+    acessMode: ReadWriteOnce
+    size: "20Gi"
+  wordpress:
+    pvc: wp-pv-claim
+    acessMode: ReadWriteOnce
+    size: "20Gi"
+
+ingress:
+  host: app-127-0-0-1.nip.io
+  pathType: Prefix
+  tlsSecret: wordpress-tls
