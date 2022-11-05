@@ -17,7 +17,7 @@ spec:
         app: {{ .Values.appName }}
         tier: mysql
     spec:
-      serviceAccountName: mysql-sa
+      #serviceAccountName: mysql-sa
       replicas: {{ .Values.mysql.replicaCount }}
       containers:
       - image: {{ .Values.mysql.image.name }}:{{ .Values.mysql.image.tag }}
