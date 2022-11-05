@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress-mysql
+  labels:
+    app: {{ .Values.appName }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+      tier: mysql
+  strategy:
+    type: {{ .Values.mysql.strategy }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}
+        tier: mysql
+    spec:
+      serviceAccountName: mysql-sa
+      replicas: {{ .Values.mysql.replicaCount }}
+      containers:
+      - image: {{ .Values.mysql.image.name }}:{{ .Values.mysql.image.tag }}
+        name: mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.secret.name }}
+              key: {{ .Values.secret.key }}
+        ports:
+        - containerPort: 3306
+          name: mysql
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: {{ .Values.volume.mysql.pvc }}
