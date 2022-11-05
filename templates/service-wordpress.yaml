@@ -10,4 +10,4 @@ spec:
   selector:
     app: {{ .Values.appName }}
     tier: frontend
-  type: ClusterP
+  type: ClusterIP
